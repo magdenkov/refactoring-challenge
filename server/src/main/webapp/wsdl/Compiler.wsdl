@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://server.compiler.example.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://server.compiler.example.com" xmlns:intf="http://server.compiler.example.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://server.compiler.example.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="buildAndRun">
+    <complexType>
+     <sequence>
+      <element name="code" type="xsd:string"/>
+      <element name="data" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="buildAndRunResponse">
+    <complexType>
+     <sequence>
+      <element name="buildAndRunReturn" type="impl:Result"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="Result">
+    <sequence>
+     <element name="trace" nillable="true" type="xsd:string"/>
+     <element name="output" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="buildAndRunRequest">
+
+      <wsdl:part element="impl:buildAndRun" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="buildAndRunResponse">
+
+      <wsdl:part element="impl:buildAndRunResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Compiler">
+
+      <wsdl:operation name="buildAndRun">
+
+         <wsdl:input message="impl:buildAndRunRequest" name="buildAndRunRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:buildAndRunResponse" name="buildAndRunResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="CompilerSoapBinding" type="impl:Compiler">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="buildAndRun">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="buildAndRunRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="buildAndRunResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="CompilerService">
+
+      <wsdl:port binding="impl:CompilerSoapBinding" name="Compiler">
+
+         <wsdlsoap:address location="http://localhost:8080/services/Compiler"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

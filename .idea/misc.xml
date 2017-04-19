@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="C:/bubbl/bubbl2/gv-spring" value="2932197727390" />
+        <entry key="C:/bubbl/bubblbackendnew/gv-spring" value="2952208783662" />
+        <entry key="C:/bubbl/bubblbackendnew1/gv-spring" value="2971726890747" />
+        <entry key="C:/bubbl/bubblbackendnew2/gv-spring" value="2976944229587" />
+        <entry key="C:/bubbl/network" value="2979328406145" />
+        <entry key="C:/bubbl/upwork2" value="2979098684693" />
+        <entry key="C:/bubbl/upwork3" value="2979328232829" />
+        <entry key="C:/bubblJWT/boot-stateless-auth" value="2936467294171" />
+        <entry key="C:/jhipster/testapp1" value="2950983853106" />
+        <entry key="C:/tl/google-maps-services-java-master" value="1479822818000" />
+        <entry key="C:/tl/v1" value="2957738614376" />
+        <entry key="C:/tl/v2" value="2957742191893" />
+        <entry key="C:/tl/v3" value="2958241922419" />
+        <entry key="C:/tl/v7/tourologist-server" value="2959955166525" />
+        <entry key="C:/tl/v9/tourologist-server" value="2971736156225" />
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_3" default="true" assert-keyword="false" jdk-15="false" />
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

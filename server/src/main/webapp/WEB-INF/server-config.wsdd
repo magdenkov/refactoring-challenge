@@ -1,0 +1,35 @@
+<deployment xmlns="http://xml.apache.org/axis/wsdd/"
+	xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+	<service name="Compiler" provider="java:RPC" style="wrapped"
+		use="literal">
+		<parameter name="wsdlTargetNamespace" value="http://server.compiler.example.com" />
+		<parameter name="wsdlServiceElement" value="CompilerService" />
+		<parameter name="schemaQualified" value="http://server.compiler.example.com" />
+		<parameter name="wsdlServicePort" value="Compiler" />
+		<parameter name="className" value="com.example.compiler.server.Compiler" />
+		<parameter name="wsdlPortType" value="Compiler" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<operation xmlns:operNS="http://server.compiler.example.com"
+			xmlns:retNS="http://server.compiler.example.com" xmlns:rtns="http://server.compiler.example.com"
+			name="buildAndRun" qname="operNS:buildAndRun" returnQName="retNS:buildAndRunReturn"
+			returnType="rtns:Result" soapAction="">
+			<parameter xmlns:pns="http://server.compiler.example.com"
+				xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:code" type="tns:string" />
+			<parameter xmlns:pns="http://server.compiler.example.com"
+				xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:data" type="tns:string" />
+		</operation>
+		<parameter name="allowedMethods" value="buildAndRun" />
+
+		<typeMapping xmlns:ns="http://server.compiler.example.com"
+			qname="ns:Result" type="java:com.example.compiler.server.Result"
+			serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+			deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+			encodingStyle="" />
+	</service>
+	<transport name="http">
+		<requestFlow>
+			<handler type="java:org.apache.axis.handlers.http.URLMapper" />
+		</requestFlow>
+	</transport>
+</deployment>
